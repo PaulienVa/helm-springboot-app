@@ -1,6 +1,6 @@
 apiVersion: v2
 name: myapp
-description: Spring Boot demo applicationion' or a 'library' chart.
+description: Spring Boot demo application using Helm to deploy
 type: application
 
 version: 0.1.0
