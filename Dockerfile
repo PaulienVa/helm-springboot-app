@@ -1,4 +1,4 @@
-FROM openjdk:17-alpine
+FROM openjdk:17.0.1-alpine
 VOLUME /tmp
 ARG JAVA_OPTS
 ENV JAVA_OPTS=$JAVA_OPTS
