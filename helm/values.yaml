@@ -1,5 +1,7 @@
 replicaCount: 1
 
+appName: demo-helm
+
 image:
   repository: paulienvanalst/demo-helm
   pullPolicy: Always
