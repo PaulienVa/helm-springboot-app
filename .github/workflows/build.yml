@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven
+name: Build App
 
 on:
   push:
@@ -29,11 +29,10 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B install --file pom.xml
-    - name: Upload Jar
-      uses: actions/upload-artifact@v4
-      with:
-        name: demo-snapshot-jar
-        path: demo-0.0.1-SNAPSHOT.jar
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag paulienvanalst/demo-helm:$(date +%s)
+
+
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
 #    - name: Update dependency graph
