@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
       - name: {{ .Values.appName }}
-        image: ghcr.io/paulienva/helm-springboot-app:v0.0.4
+        image: ghcr.io/paulienva/helm-springboot-app:v0.0.5
